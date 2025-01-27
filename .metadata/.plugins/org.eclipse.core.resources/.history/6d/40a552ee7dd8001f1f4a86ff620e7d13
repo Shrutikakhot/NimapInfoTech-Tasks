@@ -1,0 +1,19 @@
+package com.example.demo.service;
+
+import com.example.demo.model.Registration;
+
+public class RegistrationServiceImpl implements RegistrationService {
+
+	@Override
+	public Registration save(Registration reg) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Registration getReg(int reg_id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,7 @@
+package com.example.demo.model;
+
+public class Registration {
+
+	private int reg_id;
+	private String name,email;
+}

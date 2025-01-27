@@ -1,0 +1,50 @@
+package com.example.demo.model;
+
+public class Registration {
+
+	private int reg_id;
+	private String name,email;
+	
+	public Registration() {
+		super();
+	}
+
+	public Registration(String name, String email) {
+		super();
+		this.name = name;
+		this.email = email;
+	}
+
+	public int getReg_id() {
+		return reg_id;
+	}
+
+	public void setReg_id(int reg_id) {
+		this.reg_id = reg_id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	@Override
+	public String toString() {
+		return "Registration [reg_id=" + reg_id + ", name=" + name + ", email=" + email + "]";
+	}
+	
+	
+	
+	
+}

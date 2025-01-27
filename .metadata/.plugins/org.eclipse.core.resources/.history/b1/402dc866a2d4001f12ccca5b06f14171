@@ -1,0 +1,28 @@
+package com.example.demo.service;
+
+import com.example.demo.model.User;
+import com.example.demo.repository.UserRepository;
+
+public class UserServiceImpl implements UserService {
+
+	private UserRepository userrepo;
+	
+	@Override
+	public User save(User user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public User getUser(int userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(int userId) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

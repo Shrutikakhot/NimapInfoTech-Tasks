@@ -1,0 +1,68 @@
+package com.example.demo.model;
+
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
+
+@Entity
+public class Registration {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int reg_id;
+	private String name,email;
+	
+	@OneToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="user_id" ,referencedColumnName = "userId")
+	@JsonManagedReference
+	private User user;
+	
+	public Registration() {
+		super();
+	}
+
+	public Registration(String name, String email) {
+		super();
+		this.name = name;
+		this.email = email;
+	}
+
+	public int getReg_id() {
+		return reg_id;
+	}
+
+	public void setReg_id(int reg_id) {
+		this.reg_id = reg_id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+}
